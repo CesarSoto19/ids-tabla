@@ -1,0 +1,45 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-button/paper-button.html">
+
+<dom-module id="ids-botones">
+  <template>
+    <style>
+     host {
+        display: block; 
+      }
+      paper-button{
+        background: green;
+        color: white;
+
+      }
+    </style>
+    <h2>Hola [[prop1]]!</h2>
+  <slot name="buttons">
+ <paper-button raised on-click="handler">Boton 1</paper-button>
+<paper-button raised on-click="">Boton 2</paper-button>
+  </template>
+  
+  <script>
+    /**
+     * `ids-botones`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class IdsBotones extends Polymer.Element {
+      static get is() { return 'ids-botones'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'Esto es un componente para mostrar botones'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(IdsBotones.is, IdsBotones);
+  </script>
+</dom-module>

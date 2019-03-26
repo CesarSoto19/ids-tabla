@@ -1,0 +1,6 @@
+{
+  "name": "ids-aplicacion",
+  "short_name": "ids-aplicacion",
+  "start_url": "/",
+  "display": "standalone"
+}
